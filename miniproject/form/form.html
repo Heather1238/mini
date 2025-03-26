@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Methylation Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <!-- Connect form to result.html with GET method -->
+        <form action="../result/result.html" method="get">
+
+
+            <div class="form-group">
+                <label for="species">Species:</label>
+                <select id="species" name="species" required>
+                    <option value="">Select a species</option>
+                    <option value="rice">Rice</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="maize">Maize</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="promoter_methylation">Promoter Methylation (%):</label>
+                <input type="number" id="promoter_methylation" name="promoter_methylation" min="0" max="100" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="te_methylation">TE Methylation (%):</label>
+                <input type="number" id="te_methylation" name="te_methylation" min="0" max="100" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ch">CH (%):</label>
+                <input type="number" id="ch" name="ch" min="0" max="100" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="chg">CHG (%):</label>
+                <input type="number" id="chg" name="chg" min="0" max="100" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ch4">CH4 (%):</label>
+                <input type="number" id="ch4" name="ch4" min="0" max="100" step="0.01" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
